@@ -70,8 +70,8 @@ export const translations: Record<"en" | "bn", TranslationStrings> = {
       title: "Healthcare Assistant & Midwife",
       downloadCv: "Download CV",
       contactBtn: "Get in Touch",
-      callBtn: "Call: 074-4015-1443",
-      location: "19 Challiner Mews, S60 5UW, Rotherham, UK"
+      callBtn: "Call: 07427377516",
+      location: "17 Orchard court, Bridge Street, Walton-on-Thames, KT12 1AN"
     },
     about: {
       heading: "Professional Summary",
@@ -97,9 +97,9 @@ export const translations: Record<"en" | "bn", TranslationStrings> = {
       subheading: "Comprehensive patient care, emergency de-escalation, mental health, and clinical midwifery skills.",
     },
     contact: {
-      heading: "Contact & Professional Reference",
+      heading: "Contact & Professional References",
       subheading: "Feel free to reach out for healthcare assistant shifts, full-time opportunities, or care inquiries in the UK.",
-      refTitle: "Verified Work Reference",
+      refTitle: "Verified Work References",
       formTitle: "Send a Direct Message",
       nameLabel: "Your Name",
       phoneLabel: "Phone Number",
@@ -125,8 +125,8 @@ export const translations: Record<"en" | "bn", TranslationStrings> = {
       title: "হেলথকেয়ার অ্যাসিস্ট্যান্ট ও মিডওয়াইফ",
       downloadCv: "সিভি ডাউনলোড",
       contactBtn: "যোগাযোগ করুন",
-      callBtn: "কল: 074-4015-1443",
-      location: "১৯ চ্যালেঞ্জার মিউজ, এস৬০ ৫ইউডব্লিউ, রদারহ্যাম, যুক্তরাজ্য"
+      callBtn: "কল: 07427377516",
+      location: "১৭ অর্চার্ড কোর্ট, ব্রিজ স্ট্রিট, ওয়ালটন-অন-থেমস, KT12 1AN"
     },
     about: {
       heading: "প্রফেশনাল সামারি",

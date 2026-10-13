@@ -29,6 +29,16 @@ export interface TrainingCertification {
   icon: string;
 }
 
+export interface ReferenceItem {
+  id: string;
+  name: string;
+  title: string;
+  company?: string;
+  address?: string;
+  phone: string;
+  email: string;
+}
+
 export interface PortfolioDataConfig {
   personalInfo: {
     name: string;
@@ -59,61 +69,55 @@ export interface PortfolioDataConfig {
   additionalTraining: TrainingCertification[];
   workHistory: WorkHistoryItem[];
   education: EducationItem[];
-  reference: {
-    name: string;
-    title: string;
-    company: string;
-    phone: string;
-    email: string;
-  };
+  references: ReferenceItem[];
 }
 
 export const suhagiCvData: PortfolioDataConfig = {
   personalInfo: {
     name: "SUHAGI AKTER",
-    headline: "Healthcare Assistant & Qualified Midwife",
+    headline: "Care Assistant & Qualified Midwife",
     subTitles: [
-      "Health Care Assistant (UK)",
-      "Qualified Midwife (Diploma in Midwifery)",
-      "Mental Health & Dementia Support Worker",
-      "Special Needs & Residential Care Assistant"
+      "Care Assistant — Natgab Services Limited, Enfield",
+      "Care Assistant — Hands On Rother Ltd (March 2023 - October 2025)",
+      "Qualified Midwife — Diploma in Midwifery (BRAC University)",
+      "Mental Health, Dementia & Residential Care Support"
     ],
-    phone: "074-4015-1443",
+    phone: "07427377516",
     email: "suhagiakter262@gmail.com",
-    address: "19 Challiner Mews, S60 5UW, Rotherham",
-    city: "Rotherham, UK",
-    postcode: "S60 5UW",
+    address: "17 Orchard court, Bridge Street, Walton-on-Thames, KT12 1AN",
+    city: "Walton-on-Thames, Surrey, UK",
+    postcode: "KT12 1AN",
     dob: "15-12-1998",
-    visaStatus: "Skilled Worker - Tier 2 (Health Care Assistant)",
-    criminalRecord: "None (Clean, Updated DBS)",
+    visaStatus: "Skill worker - 2 tire Care Assistant",
+    criminalRecord: "None (Adult enhance DBS)",
     languages: "Bilingual (Fluent in English & Bengali)",
     professionalSummary:
-      "An experienced and well-qualified healthcare assistant with a thorough working knowledge of residential core legislation, including good practices and health and safety standards. Experienced in the care of young people, adults, and the elderly, as well as those with special needs and/or mental health challenges. Able to carry out all aspects of the role, from personal care, administering medication, meal preparation and record keeping, also willing to work according to a rota, including night shifts. As a team player, very willing to attend training and team meetings. Have an in-depth knowledge of national care standards and how these apply to different categories of people in care.",
+      "An experienced and well-qualified health care assistant with a thorough working knowledge of residential core legislation, including good practices and health and safety standards. Experienced in the care of young people, adults, and the elderly, as well as those with special needs and/or mental health challenges. Able to carry out all aspects of the role, from personal care, administering medication, meal preparation and record keeping, also willing to work according to a rota, including night shifts. As a team player, very willing to attend training and team meetings. Have an in-depth knowledge of national care standards and how these apply to different categories of people in care.",
     profileImage: profileImg
   },
   keyHighlights: [
     {
-      label: "Current Role in UK",
-      value: "Healthcare Assistant",
-      subtext: "Hands On Rother LTD (Since March 2023)",
-      icon: "fa-solid fa-user-nurse"
+      label: "Current Employment",
+      value: "Natgab Services Limited",
+      subtext: "Care Assistant, Enfield (Since Nov 2025)",
+      icon: "fa-solid fa-hospital-user"
     },
     {
-      label: "Clinical Qualification",
-      value: "Diploma in Midwifery",
-      subtext: "BRAC University, Bangladesh",
-      icon: "fa-solid fa-graduation-cap"
+      label: "Previous UK Role",
+      value: "Hands On Rother Ltd",
+      subtext: "Care Assistant (March 2023 – Oct 2025)",
+      icon: "fa-solid fa-user-nurse"
     },
     {
       label: "UK Visa Status",
       value: "Skilled Worker - Tier 2",
-      subtext: "Full Right to Work in Healthcare",
+      subtext: "Care Assistant (Full Right to Work)",
       icon: "fa-solid fa-passport"
     },
     {
-      label: "DBS Status",
-      value: "Clean Record",
-      subtext: "Updated Enhanced DBS Verified",
+      label: "Criminal Record",
+      value: "Clean DBS",
+      subtext: "None (Adult enhance DBS)",
       icon: "fa-solid fa-shield-halved"
     }
   ],
@@ -121,55 +125,62 @@ export const suhagiCvData: PortfolioDataConfig = {
     {
       category: "Patient Care & Clinical Support",
       skills: [
-        "Client Assessment",
-        "Monitoring & Observation (Vital Signs)",
-        "Assisting the Client's Care",
-        "Personal Care Assistance (Dignified Bathing & Hygiene)",
-        "Patient Mobility Assistance (Hoist & Wheelchair)",
-        "Equipment Sterilization",
-        "Nutrition Management & Assisted Feeding",
-        "Infection Control Procedures",
-        "Basic Life Support & First Aid"
+        "Client assessment",
+        "Monitoring and observation",
+        "Assisting the client's care",
+        "Personal care assistance (privacy & dignity)",
+        "Patient mobility assistance (hoist & wheelchair)",
+        "Equipment sterilization",
+        "Nutrition management & physical well-being",
+        "Infection control procedures",
+        "Basic life support & First Aid"
       ]
     },
     {
       category: "Specialized & Mental Health Care",
       skills: [
-        "Disability & Mental Health Challenges Care",
-        "Dementia Awareness & Crisis Reassurance",
-        "One-to-One Observation (Self-Harm Risk Support)",
-        "CPI Safety Intervention & De-escalation",
-        "Elderly Care & Bed-Bound Patient Support",
-        "Care Planning & Updating Care Plans",
-        "Administering Medication & MAR Documentation",
-        "Safeguarding Knowledge (UK Care Standards)"
+        "Disability and mental health challenges care",
+        "Dementia awareness (support without force/intimidation)",
+        "One-to-one observation (high risk for self-harm)",
+        "Emergency management and restraining",
+        "Elderly care & bed-bound patient hygiene",
+        "Care planning & updating care plans",
+        "Assistance with medication taking & documenting (MAR)",
+        "Safeguarding knowledge (UK care standards)"
       ]
     },
     {
-      category: "Professional & Communication",
+      category: "Professional, Leadership & Communication",
       skills: [
-        "Bilingual Verbal Communication (English & Bengali)",
-        "Extremely Organized & Detail-Oriented",
-        "Time Management & Rota Flexibility (Night Shifts)",
-        "Calm Under Pressure & Emergency Management",
-        "Patient Relationship Building & Counseling",
-        "Confidentiality & Compliance Standards",
-        "Team Work & Multi-disciplinary Coordination",
-        "Home Care & Social Activities Facilitation"
+        "Strong verbal communication (Bilingual: English & Bengali)",
+        "Leadership (Guiding care delivery)",
+        "Extremely organized & Time management",
+        "Team work & Multi-disciplinary coordination",
+        "Calm under pressure during crisis situations",
+        "Patient relationship building & Counseling",
+        "Care management & Documenting written evidence",
+        "Home care, social care & post-hospital discharge support"
       ]
     }
   ],
   additionalTraining: [
     {
-      id: "tr-1",
-      title: "CSTF (Clinical Skills Training Framework - All in One Day)",
+      id: "tr-0",
+      title: "Mandatory Training",
       provider: "UK Healthcare Standards",
+      category: "Core Induction",
+      icon: "fa-solid fa-check-double"
+    },
+    {
+      id: "tr-1",
+      title: "CSTF (all in one day)",
+      provider: "Clinical Skills Training Framework",
       category: "Mandatory Core Training",
       icon: "fa-solid fa-certificate"
     },
     {
       id: "tr-2",
-      title: "CPI Safety Intervention",
+      title: "CPI Safety intervention",
       provider: "Crisis Prevention Institute",
       category: "Crisis & De-escalation",
       icon: "fa-solid fa-shield-heart"
@@ -177,91 +188,87 @@ export const suhagiCvData: PortfolioDataConfig = {
     {
       id: "tr-3",
       title: "Oliver McGowan Mandatory Training for Learning Disabilities and Autism",
-      provider: "NHS England / UK Standard",
-      category: "Learning Disabilities",
+      provider: "NHS England Standards",
+      category: "Learning Disabilities & Autism",
       icon: "fa-solid fa-brain"
     },
     {
       id: "tr-4",
-      title: "Dysphagia Online Course",
+      title: "Dysphagia Online course",
       provider: "Care Skill Academy",
-      category: "Swallowing & Safe Feeding",
+      category: "Safe Swallowing & Feeding",
       icon: "fa-solid fa-utensils"
     },
     {
       id: "tr-5",
-      title: "Self-Harm Online Course",
+      title: "Self-harm Online Course",
       provider: "Care Skill Academy",
       category: "Mental Health Support",
       icon: "fa-solid fa-hand-holding-heart"
-    },
-    {
-      id: "tr-6",
-      title: "Medication Practice",
-      provider: "Care Skill Academy",
-      category: "Medication Administration",
-      icon: "fa-solid fa-pills"
     }
   ],
   workHistory: [
     {
       id: "wh-1",
-      role: "Health Care Assistant",
-      company: "Hands On Rother LTD",
-      location: "Rotherham, UK",
-      period: "March 2023 – Current",
+      role: "Care Assistant",
+      company: "Natgab Services Limited",
+      location: "Enfield, UK",
+      period: "November 2025 to current",
       current: true,
-      facilityDetails: "Cygnet Acer Clinic & Cherry Tree Care LTD (Chesterfield, UK)",
+      facilityDetails: "Community Healthcare & Home Care Services",
       responsibilities: [
-        "Ensuring safe, secure living conditions for service users, reducing risk and enhancing quality of life.",
-        "Supporting individuals experiencing mental health challenges with empathetic listening and problem-solving.",
-        "Delivering person-centered care and conducting comprehensive risk assessments.",
-        "Providing dedicated 1-to-1 observation for service users at high risk of self-harm.",
-        "Emergency management, behavioral de-escalation, and maintaining a calm demeanor in crisis situations.",
-        "Strict adherence to infection control standards to ensure safety for both staff and patients.",
-        "Promoting independence while assisting patients with daily personal care routines (showering/bathing with dignity).",
-        "Preparing balanced meals, planning mealtimes, feeding assistance, and nutritional support.",
-        "Safe patient transport using hoists, mobility aids, and wheelchairs.",
-        "Handling challenging behavior from dementia-affected individuals with patience, without force or intimidation.",
-        "Escorting patients to medical appointments, hospital procedures, and community social activities.",
-        "Assisting with medication taking, documenting on MAR charts, and monitoring vital signs for early detection of complications."
+        "Assist clients with all activities of daily living with respect for individual needs, dignity, and privacy.",
+        "Assist in improving the physical well-being of clients through balanced nutrition and meal planning.",
+        "Assist and support other professionals during clinical treatment and procedures in the community.",
+        "Support clients post hospital discharge home ensuring their comfort, recovery, and safety.",
+        "Escort clients to various places, clinical departments, and community appointments as required.",
+        "Able to document accurate written evidence of care delivery and report concerns promptly."
       ],
-      skills: ["Mental Health Support", "Dementia Care", "Medication Practice", "1-to-1 Observation", "Infection Control", "Hoist & Wheelchair Transport"]
+      skills: ["Activities of Daily Living", "Nutrition Management", "Post-Discharge Care", "Community Procedures", "Care Documentation"]
     },
     {
       id: "wh-2",
-      role: "Midwife",
-      company: "Zakiganj Hospital and Diagnosis Center",
-      location: "Bangladesh",
-      period: "August 2022 – December 2022",
+      role: "Care Assistant",
+      company: "Hands On Rother Ltd",
+      location: "Rotherham, UK",
+      period: "March 2023 to October 2025",
       current: false,
+      facilityDetails: "Cygnet Acer Clinic & Cherry Tree Care LTD (Chesterfield, UK)",
       responsibilities: [
-        "Conducted antenatal health checks, vitals assessment, and maternal monitoring.",
-        "Provided adolescent menstrual hygiene education and reproductive health counseling.",
-        "Assisted mothers in labor preparation, emotional reassurance, and pain coping techniques.",
-        "Maintained hospital equipment sterilization and strict aseptic clinical hygiene.",
-        "Advised parents on immediate newborn care, breastfeeding initiation, and postpartum hygiene."
+        "Duties at Cygnet Acer Clinic: Ensuring safe, secure living conditions for service users, reducing risk and enhancing quality of life.",
+        "Supporting those who have mental health challenges with active listening and empathetic counseling.",
+        "Conducting person-centered care and risk assessments; providing 1-to-1 observation for individuals at high risk of self-harm.",
+        "Emergency management, behavioral restraining, and crisis de-escalation while maintaining a calm demeanor.",
+        "Strict adherence to infection control measures for a safe environment for both staff and patients alike.",
+        "Duties at Cherry Tree Care LTD: Prompting and encouraging independence while assisting patients with daily routines.",
+        "Assisting in all aspects of personal care (showering/bathing and retaining comfort with dignity).",
+        "Preparing meals, ensuring balanced nutrition intake, mealtime planning, feeding and support.",
+        "Safely and securely transporting patients using hoists and wheelchairs; routine sanitization tasks.",
+        "Handling challenging behavior from dementia-affected individuals effectively without force or intimidation.",
+        "Managing personal hygiene of bed-bound patients, assistance with medication taking and documenting (MAR), and vital signs monitoring for early detection of complications."
       ],
-      skills: ["Antenatal Screening", "Maternal Care", "Equipment Sterilization", "Patient Counseling"]
+      skills: ["Mental Health Support", "Dementia Care", "1-to-1 Observation", "Medication Practice", "Hoist & Wheelchair Transport", "Infection Control"]
     },
     {
       id: "wh-3",
       role: "Midwife",
-      company: "Bodor Uddin General Hospital",
+      company: "Zakiganj Hospital and Diagnosis Center & Bodor Uddin General Hospital",
       location: "Bangladesh",
-      period: "April 2021 – September 2021",
+      period: "April 2021 to December 2022",
       current: false,
+      facilityDetails: "Zakiganj Hospital (Aug 2022 – Dec 2022) | Bodor Uddin General Hospital (Apr 2021 – Sep 2021)",
       responsibilities: [
-        "Provided pre-pregnancy, antenatal, intrapartum, and postpartum clinical midwifery care.",
-        "Examined pregnant women, took biological samples, performed screening tests, and tracked vital signs.",
-        "Identified danger signs of pregnancy and distinguished low-risk vs high-risk cases for obstetric triage.",
-        "Monitored fetal heart conditions regularly during pregnancy and intrapartum labor stages.",
-        "Conducted normal vaginal deliveries and managed emergency obstetric complications.",
-        "Closely observed newborns, evaluated APGAR criteria, and administered immediate neonatal care.",
-        "Supported parents through difficult outcomes including compassionate counseling for miscarriage and neonatal loss.",
-        "Delivered family planning guidance and maintained rigorous clinical record-keeping."
+        "Provided pre-pregnancy care, adolescent menstrual hygiene care, and nutritional counseling.",
+        "Conducted antenatal care: examined and monitored pregnant women, carried out screening tests, and took patient samples.",
+        "Regularly checked vital signs, identified high-risk pregnancies, and raised awareness about danger signs during and after labour.",
+        "Encouraged mothers for normal vaginal delivery who were at low risk; monitored and administered medications.",
+        "Regularly monitored fetus condition during pregnancy and intrapartum period; emergency and complications management.",
+        "Sterilized all equipment and conducted safe normal vaginal deliveries.",
+        "Closely observed newborns, provided postpartum care, and counseled on family planning methods.",
+        "Advised and supported parents in daily newborn care, as well as helping parents cope with miscarriage, stillbirth, and neonatal death.",
+        "Maintained evidence-based records, provided empathetic care to vulnerable mothers, and arranged referral care with adequate cautions."
       ],
-      skills: ["Normal Vaginal Delivery", "Fetal Monitoring", "Obstetric Triage", "Postpartum Care", "Family Planning", "Bereavement Support"]
+      skills: ["Normal Vaginal Delivery", "Antenatal & Postnatal Care", "Fetal Monitoring", "Obstetric Complications", "Equipment Sterilization", "Bereavement Support"]
     }
   ],
   education: [
@@ -269,32 +276,43 @@ export const suhagiCvData: PortfolioDataConfig = {
       id: "edu-1",
       degree: "Diploma of Midwifery",
       institution: "BRAC University",
-      period: "January 2018 – December 2020",
+      period: "January 2018 to December 2020",
       location: "Bangladesh",
-      highlights: "Comprehensive clinical midwifery training covering anatomy, physiology, safe delivery, and community healthcare."
+      highlights: "Comprehensive clinical midwifery training covering anatomy, normal delivery, maternal and neonatal care."
     },
     {
       id: "edu-2",
       degree: "Higher Secondary Certificate (HSC)",
       institution: "Sunamganj Government College",
-      period: "July 2015 – March 2017",
+      period: "July, 2015 to March, 2017",
       location: "Bangladesh",
-      highlights: "Higher secondary education completed in Science/Humanities stream."
+      highlights: "Higher secondary education completed."
     },
     {
       id: "edu-3",
       degree: "Secondary School Certificate (SSC)",
       institution: "Rozoni Ganj High School",
-      period: "January 2013 – February 2015",
+      period: "January, 2013 to February, 2015",
       location: "Bangladesh",
-      highlights: "Secondary school education."
+      highlights: "Secondary school certificate completed."
     }
   ],
-  reference: {
-    name: "Sibbs Dube",
-    title: "Care Service Manager",
-    company: "Hands On Rother LTD",
-    phone: "077-8978-6166",
-    email: "contact@handsonrother.co.uk"
-  }
+  references: [
+    {
+      id: "ref-1",
+      name: "TAZIK RASHID",
+      title: "Private Care Employer",
+      phone: "07816906180",
+      email: "tazikrashid@hotmail.com"
+    },
+    {
+      id: "ref-2",
+      name: "SIBONILE SIKHOSANA",
+      title: "Recruitment Manager",
+      company: "Hands on Rother Ltd",
+      address: "72 Effingham Street, Rotherham, S65 1AL",
+      phone: "07816906180", // Contactable via Hands on Rother
+      email: "contact@handsonrother.co.uk"
+    }
+  ]
 };

@@ -49,7 +49,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           </p>
 
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-            Currently working at <strong>Hands On Rother LTD</strong>, I have gained extensive frontline experience across specialist facilities including Cygnet Acer Clinic and Cherry Tree Care LTD in Chesterfield, UK. My clinical duties encompass 1-to-1 high-risk observations, behavioral de-escalation (CPI safety intervention), dignified personal hygiene assistance, and vital signs monitoring.
+            Currently working as a Care Assistant at <strong>Natgab Services Limited</strong> in Enfield (since November 2025), I support clients with activities of daily living, nutritional well-being, community procedures, and post-discharge recovery. Previously at <strong>Hands On Rother Ltd</strong> (March 2023 – October 2025), I gained extensive experience across Cygnet Acer Clinic and Cherry Tree Care LTD in Chesterfield, delivering 1-to-1 high-risk observations, dementia care, medication assistance, and vital signs monitoring.
           </p>
 
           <div className="pt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-700 dark:text-slate-300">

@@ -21,7 +21,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   portfolioData,
   lang
 }) => {
-  const { personalInfo, reference } = portfolioData;
+  const { personalInfo, references } = portfolioData;
   const t: TranslationStrings = translations[lang];
 
   const [formData, setFormData] = useState({
@@ -117,35 +117,45 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             </div>
           </div>
 
-          {/* Official Referee Card (Matches the Light Blue Card Style in reference picture!) */}
-          <div className="p-6 rounded-2xl bg-[#f0f9ff] dark:bg-slate-900/60 border border-[#bae6fd] dark:border-slate-800">
-            <div className="flex items-center gap-2 mb-2">
+          {/* Official Referees Card (Matches the Light Blue Card Style in reference picture!) */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0284c7] flex items-center gap-1.5">
               <UserCheck className="w-4 h-4 text-[#0284c7]" />
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#0284c7]">
-                {t.contact.refTitle}
-              </h4>
-            </div>
+              <span>{t.contact.refTitle}</span>
+            </h4>
 
-            <div className="space-y-1 text-xs text-slate-700 dark:text-slate-300">
-              <p className="text-base font-extrabold text-slate-900 dark:text-white">
-                {reference.name}
-              </p>
-              <p className="font-medium text-slate-500 dark:text-slate-400">
-                {reference.title}, {reference.company}
-              </p>
-              <p className="pt-2 text-xs font-semibold text-[#0284c7]">
-                Phone:{" "}
-                <a href={`tel:${reference.phone.replace(/[^0-9]/g, "")}`} className="hover:underline">
-                  {reference.phone}
-                </a>
-              </p>
-              <p className="text-xs text-slate-600 dark:text-slate-400">
-                Email:{" "}
-                <a href={`mailto:${reference.email}`} className="hover:underline">
-                  {reference.email}
-                </a>
-              </p>
-            </div>
+            {references.map((ref) => (
+              <div
+                key={ref.id}
+                className="p-5 rounded-2xl bg-[#f0f9ff] dark:bg-slate-900/60 border border-[#bae6fd] dark:border-slate-800 space-y-1 text-xs text-slate-700 dark:text-slate-300"
+              >
+                <p className="text-sm font-extrabold text-slate-900 dark:text-white">
+                  {ref.name}
+                </p>
+                <p className="font-medium text-slate-500 dark:text-slate-400">
+                  {ref.title}{ref.company ? `, ${ref.company}` : ""}
+                </p>
+                {ref.address && (
+                  <p className="text-[11px] text-slate-400">
+                    📍 {ref.address}
+                  </p>
+                )}
+                <div className="pt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs font-semibold">
+                  <a
+                    href={`tel:${ref.phone.replace(/[^0-9]/g, "")}`}
+                    className="text-[#0284c7] hover:underline flex items-center gap-1"
+                  >
+                    📞 {ref.phone}
+                  </a>
+                  <a
+                    href={`mailto:${ref.email}`}
+                    className="text-slate-600 dark:text-slate-400 hover:text-[#0284c7] hover:underline flex items-center gap-1"
+                  >
+                    ✉️ {ref.email}
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
